@@ -1,4 +1,4 @@
-import { List, Card, Avatar } from "antd";
+import { List, Card, Button } from "antd";
 import { useQuery } from "@apollo/client";
 import { ITEMS_QUERY } from "../queries";
 const { Meta } = Card;
@@ -10,7 +10,7 @@ const ItemsList = () => {
     <List
       grid={{ gutter: 26, column: 4 }}
       itemLayout="vertical"
-      dataSource={data.items}
+      dataSource={data ? data.items : []}
       renderItem={(item) => (
         <Card
           hoverable
@@ -19,7 +19,14 @@ const ItemsList = () => {
         >
           <Meta
             title={`${item.title} - $${item.price}`}
-            description={item.description}
+            description={
+              <>
+                {item.description} <br />
+                <Button type="primary" style={{ marginTop: "10px" }}>
+                  Purchase
+                </Button>
+              </>
+            }
           />
         </Card>
       )}

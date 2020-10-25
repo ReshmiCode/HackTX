@@ -1,4 +1,4 @@
-import { Layout, List, Card } from "antd";
+import { Layout } from "antd";
 import { ApolloProvider } from "@apollo/client";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
 import NavBar from "./components/NavBar";
