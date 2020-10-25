@@ -3,7 +3,7 @@ import { PageHeader, Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
 const LandingPage = () => {
-  return <PageHeader title="insert app name" extra={<NavLinks />} />;
+  return <PageHeader title="insert app name" extra={[<NavLinks />]} />;
 };
 
 const NavLinks = () => {
