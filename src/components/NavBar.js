@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { PageHeader, Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
@@ -11,10 +12,12 @@ const NavLinks = () => {
   return (
     <header className="main-header">
       <div className="nav-links">
-        <a className="navLink">Search</a>
-        <a className="navLink">
+        <NavLink exact className="navLink" to="/">
+          Search
+        </NavLink>
+        <NavLink exact className="navLink" to="/profile">
           <Avatar size="large" icon={<UserOutlined />} />
-        </a>
+        </NavLink>
       </div>
     </header>
   );
