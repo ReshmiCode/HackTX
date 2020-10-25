@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Neighborhood Support
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Help support your local neighbourhood community get through difficult times through jointly funding necessary projects!
 
-## Available Scripts
+ - HackTX: [Devpost](https://devpost.com/software/neighborhood-support)
+ - Submission: [Youtube](https://youtu.be/oHhY5xMpZi0)
+ - Deployment: [Azure](https://jolly-meadow-0830c4310.azurestaticapps.net)
 
-In the project directory, you can run:
+### Inspiration
+Our team was inspired to build an application to help people get through the difficult times during COVID-19. With rising unemployment and household expenses being an increasing burden on the community, there has been an stark rise in the number of people who can no longer afford to pay rent. This inspired us to build Neighbourhood Support, an easy to use application that lets the community band together to help support each other and ensure that your impact enriches the quality of life in your locality.
 
-### `yarn start`
+### What it does
+Our application helps connect people to opportunities to fund struggling families. A group of people that are facing difficult financial situations can choose to add items that they would like to be funded through community support on our website. Then without revealing personally identifyable information we can expose these difficulties to their local community and allow people to jointly fund these requests.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### How I built it
+We built our application using a series of new and modern technologies. Our front-end is designed using **React**. For the backend we decided to go with a **MySQL** database hosted on **Hasura Cloud** that connects to our application through a **GraphQL API** & the **Apollo Client**. Our designs and UI was created through **Ant Design**. Finally to deploy our application we used **Azure Static Web Apps**. We also use locality referencing through the **Google Maps API** to identify who to support in a community.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Challenges I ran into
+We ran into challenges in using MySQL as a database option. This was fairly new to us and quite different in integrating with our application. Other challenges included connecting our backend and frontend together. While we were able to test both independently there were challenges in putting them together that involved a lot of learning with the Apollo Client.
 
-### `yarn test`
+### Accomplishments that I'm proud of
+Proud of having designed an API that is based on GraphQL. This was a new technology that our team had not tried before and getting it to work as a prototype for our hackathon submission is awesome. Having migrated from using standard REST APIs to GraphQL is a huge achievement.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### What I learned
 
-### `yarn build`
+##### Workshops at HackTX
+ - Deploying to Azure Static Web Apps
+ - Design and UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### New Things
+ - Hasura Cloud
+ - GraphQL
+ 
+### What's next for Neighborhood Support
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Integrating with Stripe for automatic payment processing and connecting it to a rich array of other side services such as Twilio and SendGrid for a more wholesome experience for the user.
