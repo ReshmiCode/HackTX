@@ -1,7 +1,8 @@
-import NavBar from "./NavBar";
 import { Layout, List, Card } from "antd";
 import { ApolloProvider } from "@apollo/client";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import NavBar from "./components/NavBar";
+import ItemsList from "./components/ItemsList";
 import "./App.css";
 const { Content } = Layout;
 
@@ -19,6 +20,7 @@ const App = () => {
         <NavBar />
         <Content>
           <h1>Your Profile:</h1>
+          <ItemsList />
         </Content>
       </Layout>
     </ApolloProvider>
