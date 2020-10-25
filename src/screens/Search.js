@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Layout, Input } from "antd";
-import NavBar from "./components/NavBar";
+import NavBar from "../components/NavBar";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 const { Content } = Layout;
 
@@ -45,10 +45,7 @@ export class MapContainer extends Component {
               lng: -97.7,
             }}
           >
-            <Marker
-              onClick={this.onMarkerClick}
-              name={"Kenyatta International Convention Centre"}
-            />
+            <Marker onClick={this.onMarkerClick} name={"Richard's Family"} />
             <InfoWindow
               marker={this.state.activeMarker}
               visible={this.state.showingInfoWindow}

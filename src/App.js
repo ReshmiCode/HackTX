@@ -1,11 +1,14 @@
-import { Layout } from "antd";
 import { ApolloProvider } from "@apollo/client";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
-import NavBar from "./components/NavBar";
-import Search from "./Search";
-import ItemsList from "./components/ItemsList";
+import Search from "./screens/Search";
+import Profile from "./screens/Profile";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Switch,
+} from "react-router-dom";
 import "./App.css";
-const { Content } = Layout;
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -15,7 +18,17 @@ const client = new ApolloClient({
 });
 
 const App = () => {
-  return <Search />;
+  return (
+    <ApolloProvider client={client}>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Search} />
+          <Route path="/profile" exact component={Profile} />
+          <Redirect to="/" />
+        </Switch>
+      </Router>
+    </ApolloProvider>
+  );
 };
 
 export default App;
